@@ -1,8 +1,9 @@
 {
   "name": "TACHIBANA",
-  "build": {
-		"dockerfile": "Dockerfile"
-	},
+  // "build": {
+	// 	"dockerfile": "Dockerfile"
+	// },
+  "image": "qianjunakasumi/tachibana-devcontainer:v1",
   //"forwardPorts": [3000],
   "customizations": {
     // Configure properties specific to VS Code.
