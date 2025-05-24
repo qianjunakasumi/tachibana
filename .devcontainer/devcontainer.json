@@ -8,6 +8,10 @@
   "customizations": {
     // Configure properties specific to VS Code.
     "vscode": {
+      "extensions": [
+        "bradlc.vscode-tailwindcss",
+        "ms-vscode.vscode-typescript-next"
+      ]
       // Add the IDs of extensions you want installed when the container is created.
       //"extensions": ["streetsidesoftware.code-spell-checker"]
     }
