@@ -6,6 +6,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
+import { ConfigProvider } from "antd";
 
 import type { Route } from "./+types/root";
 import "./app.css";
@@ -33,9 +34,26 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        {children}
-        <ScrollRestoration />
-        <Scripts />
+        <ConfigProvider
+          theme={{
+            token: {
+              "colorPrimary": "#000000",
+              "colorInfo": "#000000",
+              "colorPrimaryHover": "#1a1a1a",
+              "colorPrimaryActive": "#333333",
+              "colorPrimaryTextHover": "#1a1a1a",
+              "colorPrimaryTextActive": "#333333",
+              "colorPrimaryBg": "#f5f5f5",
+              "colorPrimaryBgHover": "#eaeaea",
+              "colorPrimaryBorder": "#d9d9d9",
+              "colorPrimaryBorderHover": "#bfbfbf"
+            },
+          }}
+        >
+          {children}
+          <ScrollRestoration />
+          <Scripts />
+        </ConfigProvider>
       </body>
     </html>
   );
