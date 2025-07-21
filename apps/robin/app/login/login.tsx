@@ -42,9 +42,11 @@ export function Login() {
         <section className="flex justify-center w-1/2">
           <div className="w-1/2">
             <h2 className="mb-4 text-2xl font-bold">Log in to your account</h2>
-            <p className="mb-12 text-sm font-light">Please use button to QIANJID single sign-on.</p>
+            <p className="mb-12 text-sm font-light">Please continue to QIANJID single sign-on.</p>
             <div className="mb-4">
-              <Checkbox onChange={agreeOnChange}>I'm agree Terms of Use</Checkbox>
+              <Checkbox onChange={agreeOnChange}>
+                I'm agree <a href="/docs/terms-of-use">Terms of Use</a>
+              </Checkbox>
               <p className="mt-1 text-red-500">
                 {messages.map((message, index) => (
                   <span key={index} className="block">* {message}</span>
@@ -57,7 +59,7 @@ export function Login() {
               onClick={handleLogin}
               loading={loading}
             >
-              Login
+              Continue
             </Button>
           </div>
         </section>
@@ -68,13 +70,13 @@ export function Login() {
               <img src={QianjLOGO} className="h-5 inline-block mr-2" alt="qianjunakasumi logo" />
               <span>X TACHIBANA</span>
             </h1>
-            <p className="mb-12 font-light">This is a cluster control system developed by @qianjunakasumi for managing infrastructure with ease.</p>
+            <p className="mb-12 font-light">A comprehensive management system developed by @qianjunakasumi for managing cluster with ease.</p>
             <Divider />
             <div className="flex gap-x-4 text-sm font-light">
               <span>©2025 QIANJUNAKASUMI</span>
-              <a>Terms of Use</a>
-              <a>Help</a>
-              <a>About</a>
+              <a href="https://tachibana.qianjunakasumi.moe">Project</a>
+              <a href="mailto:i@qianjunakasumi.moe">Help</a>
+              <a href="https://tachibana.qianjunakasumi.moe/#about">About</a>
             </div>
           </div>
         </section>
